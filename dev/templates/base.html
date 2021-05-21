@@ -14,15 +14,6 @@
                 </h1>
             </div>
         </header>
-            {% if user_pseudo == '' %}
-                <a id="register" href="/register/">S'enregistrer</a>
-            {% endif %}
-            {% if user_pseudo == '' %}
-                <a id="connect" href="/login/">Connexion</a>
-            {% endif %}
-            {% if user_pseudo != '' %}
-                <a href="{{ url_for('profil') }}">Profil</a>
-            {% endif %}
         </div>
         {% block content %}{% endblock %}
 
