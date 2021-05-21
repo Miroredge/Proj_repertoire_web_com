@@ -1,0 +1,45 @@
+{% extends 'base.html' %}
+{% block header %}
+    <h1>{% block title %}Profil : {{ user.pseudo }} - {% endblock %}</h1>
+{% endblock %}
+
+{% block content %}
+
+
+<h1 id=titre-profil>Mon compte</h1>
+
+<div class=infos>
+
+    <h3>Informations personnelles</h3>
+
+    <ul class=info-site>
+        <li>Email : <var id="response">{{user.email}}</var></li>
+        <li>Pseudo : <var id="response">{{user.pseudo}}</var></li>
+        </li>
+    </ul>
+
+    <ul class=info-perso>
+        <li>Prénom : <var id="response">{{user.firstname}}</var></li>
+        <li>Nom : <var id="response">{{user.lastname}}</var></li>
+        <li>Date de naissance : <var id="response">{{user.datebirthday}}</var></li>
+        <li>Sexe : <var id="response">{{user.sexe}}</var></li>
+        <li>Numéro de téléphone : <var id="response">{{user.phone}}</var></li>
+    </ul>
+
+
+    <ul class=adresse>
+        <li>Adresse : <var id="response">{{user.adress}}</var></li>
+        <li>Code postal : <var id="response">{{user.postalcode}}</var></li>
+        <li>Ville : <var id="response">{{user.city}}</var></li>
+    </ul>
+
+    <div class=boutons-deco-modif-delete>
+        <div>
+        <h3 id=deco><a href='/logout/'>Déconnexion</a></h3>
+        </div>
+
+    </div>
+
+</div>
+
+{% endblock %}

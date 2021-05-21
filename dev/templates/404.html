@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block header %}
+    <h1>{% block title %}Erreur 404 - {% endblock %}</h1>
+{% endblock %}
+{% block content %}
+
+<div class="err404">
+    <div id="err">
+        <h1>404</h1>
+        <a href='/'>Retourner à l'accueil</a>
+    </div>
+</div>
+
+{% endblock %}
