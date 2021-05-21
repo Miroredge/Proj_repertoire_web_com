@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>{% block title %}{% endblock %}Projekt</title>
+
+        <meta charset="utf-8">
+
+    </head>
+    <body>
+        <header id="main-header">
+            <div class="title-site">
+                <h1 id="title">
+                    <a href="/">Projekt</a>
+                </h1>
+            </div>
+        </header>
+            {% if user_pseudo == '' %}
+                <a id="register" href="/register/">S'enregistrer</a>
+            {% endif %}
+            {% if user_pseudo == '' %}
+                <a id="connect" href="/login/">Connexion</a>
+            {% endif %}
+            {% if user_pseudo != '' %}
+                <a href="{{ url_for('profil') }}">Profil</a>
+            {% endif %}
+        </div>
+        {% block content %}{% endblock %}
+
+    </body>
+</html>
